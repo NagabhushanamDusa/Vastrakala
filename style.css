@@ -1,0 +1,328 @@
+/* ===============================
+   GLOBAL RESET & BASE STYLES
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background-color: #faf6f1;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===============================
+   NAVBAR
+================================ */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 60px;
+    background-color: #4a2c2a;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    color: #f5e6c8;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 30px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #f5e6c8;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #d2a679;
+}
+
+/* ===============================
+   HERO SECTION
+================================ */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 100px;
+    min-height: 90vh;
+    background: linear-gradient(
+        to right,
+        #faf6f1 60%,
+        #f1e2c4 40%
+    );
+}
+
+.hero-content {
+    max-width: 500px;
+}
+
+.hero-content h2 {
+    font-size: 44px;
+    color: #4a2c2a;
+}
+
+.hero-content p {
+    margin: 20px 0;
+    font-size: 18px;
+    color: #555;
+}
+
+.hero-content button {
+    padding: 14px 35px;
+    background-color: #4a2c2a;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.hero-content button:hover {
+    background-color: #2f1a19;
+    transform: translateY(-3px);
+}
+
+/* ===============================
+   LOOM ANIMATION
+================================ */
+.loom {
+    display: flex;
+    gap: 14px;
+}
+
+.thread {
+    width: 7px;
+    height: 240px;
+    background: linear-gradient(#d2a679, #4a2c2a);
+    border-radius: 4px;
+    animation: weave 2s infinite ease-in-out alternate;
+}
+
+.thread:nth-child(2) { animation-delay: 0.3s; }
+.thread:nth-child(3) { animation-delay: 0.6s; }
+.thread:nth-child(4) { animation-delay: 0.9s; }
+
+@keyframes weave {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(35px);
+    }
+}
+
+/* ===============================
+   FABRICS SECTION
+================================ */
+.fabrics {
+    padding: 80px 60px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.fabrics h2 {
+    font-size: 36px;
+    color: #4a2c2a;
+    margin-bottom: 50px;
+}
+
+.fabric-cards {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 260px;
+    padding: 30px 25px;
+    background-color: #faf6f1;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    transition: transform 0.4s, box-shadow 0.4s;
+    cursor: pointer;
+}
+
+.card h3 {
+    color: #4a2c2a;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #666;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.15);
+}
+
+/* ===============================
+   FOOTER
+================================ */
+footer {
+    background-color: #4a2c2a;
+    color: #f5e6c8;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+================================ */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 30px;
+    }
+
+    .loom {
+        margin-top: 50px;
+    }
+
+    .hero-content h2 {
+        font-size: 36px;
+    }
+}
+/*========*/
+
+.weavers {
+    padding: 80px 60px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.weaver-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 35px;
+    margin-top: 50px;
+}
+
+.weaver-card {
+    background-color: #faf6f1;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.weaver-card:hover {
+    transform: translateY(-10px);
+}
+
+.weaver-card h3 {
+    color: #4a2c2a;
+    margin-bottom: 10px;
+}
+
+.weaver-card p {
+    color: #666;
+}
+
+/* Reuse modal */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 30px;
+    width: 420px;
+    border-radius: 12px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/*========*/
+
+.sustain {
+    padding: 70px;
+    text-align: center;
+    background-color: #faf6f1;
+}
+
+.sustain input {
+    padding: 8px;
+    width: 80px;
+    margin: 10px;
+}
+
+/*=====*/
+
+/* Sustainability Section */
+.sustainability-section {
+    background-color: #ffffff;
+    padding: 70px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.2rem;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #6c757d;
+    margin-top: 10px;
+}
+
+.sustainability-card {
+    padding: 25px;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sustainability-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.sustainability-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.sustainability-card h5 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a { text-decoration: none; color: inherit; }
+a:visited { color: inherit; }

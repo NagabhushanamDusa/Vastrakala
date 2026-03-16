@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VastraKala | Where Threads Tell Stories</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <h1 class="logo">VastraKala</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#fabrics">Fabrics</a></li>
+                <li><a href="#stories">Weavers</a></li>
+                <li><a href="#sustain">Sustainability</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Every Threads Tell Stories</h2>
+            <p>Experience the heritage of Indian handlooms through design and code.</p>
+            <a href="https://goswadeshi.in/" target="_blank"><button id="exploreBtn">Explore Fabrics</button></a>
+           
+        </div>
+
+        <!-- Loom Animation -->
+        <div class="loom">
+            <div class="thread">
+                
+            </div>
+            <div class="thread"></div>
+            <div class="thread"></div>
+            <div class="thread"></div>
+        </div>
+    </section>
+
+    <!-- FABRICS SECTION -->
+    <section id="fabrics" class="fabrics">
+        <h2>Fabrics of India</h2>
+
+        <div class="fabric-cards">
+            <div class="card">
+                <h3>Banarasi Silk</h3>
+                <p>Uttar Pradesh</p>
+                <!-- <img src="https://sumangalbanaras.com/cdn/shop/files/saree_handloom.jpg?v=1677144164&width=1080" alt=""> -->
+               <a href="./banarasisilk.html">explore</a>
+            </div>
+
+            <div class="card">
+                <h3>Pochampally Sarees</h3>
+                <p>Telangana</p>
+                 <!-- <img src="https://www.nishalee.com/wp-content/uploads/2021/08/Full-Pochampally-Design-saree_Aegean.jpg" alt="" target="_blank"> -->
+                  <a href="./Pochampally.html">explore</a>
+            </div>
+
+            <div class="card">
+                <h3>Kanchipuram Silk</h3>
+                <p>Tamil Nadu</p>
+                <a href="./kanchipuram.html">explore</a>
+            </div>
+
+            <div class="card">
+                <h3>Garshakurthy Silk</h3>
+                <p>Telangana</p>
+                <a href="./Garsekurthi.html">explore</a>
+            </div>
+        </div>
+    </section>
+
+     <!-- F SECTION -->
+
+    
+
+  
+
+    <!--Weavers-->
+    <section id="stories" class="weavers">
+    <h2>Meet the Weavers</h2>
+    <h4>Banarasi Silk – Uttar Pradesh</h4>
+    <p>Banarasi silk weavers from Varanasi are known for their intricate zari work and rich traditional designs.
+       Their craftsmanship reflects centuries of weaving heritage passed down through generations.</p>
+       <span>
+        <h4>Kanchipuram Silk – Tamil Nadu</h4>
+        <p>Kanchipuram weavers create heavy, durable silk sarees with bright colors and temple-inspired patterns.
+             These sarees are a symbol of South Indian tradition and wedding fashion.</p>
+       </span>
+       <span>
+        <h4>Pochampally Silk – Telangana</h4>
+        <p>Pochampally weavers are famous for their unique geometric designs and Ikat dyeing technique. 
+            Each saree is carefully hand-dyed and woven with precision.</p>
+       </span>
+       <h4>Garshakurthy Silk – Telangana</h4>
+       <p>The weavers of Garshakurthy are well-known for fulfilling government handloom orders, supporting Telangana’s traditional textile industry. 
+        Garshakurthy sarees are made using pure cotton yarn on traditional handlooms. </p>
+    <div id="weaverCards" class="weaver-cards"></div>
+</section>
+
+<!-- Weaver Modal -->
+    <div id="weaverModal" class="modal hidden">
+    <div class="modal-content">
+        <span id="closeWeaver">&times;</span>
+        <h3 id="weaverName"></h3>
+        <p id="weaverStory"></p>
+        <h1></h1>
+      </div>
+      </div>
+
+<!-- 
+    Sustainability -->
+     <section id="sustain" class="sustain">
+    <h2>Sustainability Impact</h2>
+
+    <label>Number of Garments:</label>
+    <input type="number" id="garments" value="1">
+
+    <button onclick="calculateImpact()">Calculate Impact</button>
+
+    <p id="result"></p>
+
+
+ 
+<!-- FOOTER -->
+    <footer>
+        <p>© 2025 VastraKala | Weaving Culture into Code</p>
+    </footer>
+
+      <!-- JS -->
+    <script src="./script.js"></script>
+
+</body>
+</html>
